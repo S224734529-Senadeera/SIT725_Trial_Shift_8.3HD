@@ -42,6 +42,9 @@ app.get("/job-edit", (req, res) => {
   res.sendFile(path.join(__dirname, "views", "job-edit.html"));
 });
 
+// student route for the 8.3HD task
+const studentRoute = require('./routes/student');
+app.use('/api', studentRoute);
 
 // Admin-only manage courses page
 const { authenticate, authorize } = require("./middleware/authMiddleware");
