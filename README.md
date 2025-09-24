@@ -1,5 +1,18 @@
 # Trial Shift
 
+## Run with Docker
+docker build -t s224734529-sit725-app:latest .
+docker run --rm -p 5001:5001 \
+  -e PORT=5001 \
+  -e MONGODB_URI=""mongodb+srv://projectUser:StrongPassword123@cluster0.p0d7f4x.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" \
+  -e JWT_SECRET="myVerySecretKey123" \
+  s224734529-sit725-app:latest
+
+# Then visit:
+http://localhost:5001/api/student
+# Expected JSON:
+{"name":"Senadeera Arachchige Pamuditha Rasanjana Senadeera","studentId":"S224734529"}
+
 ## Overview
 
 This project is a web application built using Node.js, Vanilla JavaScript, HTML & CSS (Materialize), and MongoDB. It follows the MVC (Model-View-Controller) architecture, ensuring a clear separation of concerns.
@@ -72,12 +85,12 @@ Trial_Shift
 - **Materialize CSS**
 - **Vanilla JavaScript**
 
-## Setup Instructions
+## Setup Instructions without Docker
 
 1. **Clone the Repository**
 
    ```bash
-   git clone https://github.com/S224734529/SIT725_Trial_Shift.git
+   git clone https://github.com/S224734529-Senadeera/SIT725_Trial_Shift_8.3HD.git
    ```
 
 2. **Install Dependencies**
