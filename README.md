@@ -4,7 +4,7 @@
 docker build -t s224734529-sit725-app:latest .
 docker run --rm -p 5001:5001 \
   -e PORT=5001 \
-  -e MONGODB_URI=""mongodb+srv://projectUser:StrongPassword123@cluster0.p0d7f4x.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" \
+  -e MONGODB_URI="mongodb+srv://projectUser:StrongPassword123@cluster0.p0d7f4x.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0" \
   -e JWT_SECRET="myVerySecretKey123" \
   s224734529-sit725-app:latest
 
@@ -191,3 +191,4 @@ Feel free to contribute to this project by submitting issues or pull requests. M
 ## License
 
 This project is licensed under the MIT License.
+
